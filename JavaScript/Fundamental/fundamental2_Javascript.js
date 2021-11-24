@@ -4,7 +4,7 @@ const months = new Array('Jan','Feb','Mar','Apr');
 console.log(months);
 console.log(months.length);
 
-months.splice(2,2,'a new month','howdy'); //splice(position to be removed,how many element to be removed, new item to add)
+months.splice(2,1,'a new month','howdy'); //splice(position to be removed,how many element to be removed, new item to add)
 console.log(months);
 
 numbers.sort();
