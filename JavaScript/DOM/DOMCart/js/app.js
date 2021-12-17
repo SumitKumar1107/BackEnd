@@ -97,3 +97,81 @@ const addcartbtns = document.querySelectorAll('.add-to-cart');
 addcartbtns.forEach(function(button){
     button.textContent = 'Something new';
 })
+
+//traversing dom from parent to children
+
+const navigation = document.querySelector('#primary');
+
+let elem;
+
+elem = navigation.children;
+
+console.log(elem);
+
+//traversing dom from children to parent
+
+const navi = document.querySelector('.add-to-cart');
+
+let ele;
+
+ele = navi.parentElement.parentElement; // or we can use previousElementSibling feature to get to parent
+
+console.log(ele);
+
+// we use nextElementSibling to get next element in dom
+
+//creating html element
+
+const newlink = document.createElement('a');
+
+newlink.class = 'link';
+newlink.href = '#';
+
+newlink.appendChild(document.createTextNode('A new link'));
+
+document.querySelector('#primary').appendChild(newlink);
+
+//replacing a html element
+
+const newHeading = document.createElement('h2');
+
+//adding id
+newHeading.id = 'heading';
+
+//adding class
+newHeading.classList.add('heading');
+
+//adding text
+newHeading.appendChild(document.createTextNode('The Best Courses'));
+
+//selecting old heading
+const oldheading = document.querySelector('#heading');
+
+//selecting parent
+const Courseslist = document.querySelector('#courses-list');
+
+Courseslist.replaceChild(newHeading,oldheading);
+
+//removing element
+
+const navig = document.querySelectorAll('.link');
+
+navig[2].remove();
+console.log(navig);
+
+//reading class
+
+const l = document.querySelector('.link');
+let elemen=l;
+
+//read class
+elemen=l.className;
+//read class (dom token list)
+elemen=l.classList;
+
+//access specific class with classlist
+elemen=l.classList[0];
+console.log(elemen);
+//getAttribute and setAttribute are imp function keep in mind also hasAttribute , removeAttribute
+
+
